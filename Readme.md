@@ -9,4 +9,4 @@ In order to use it run following commands:
 
 ```
 
-
+This also contains a basic example of grpc stream!
