@@ -25,6 +25,20 @@ function main() {
     }
     console.log(response);
   });
+
+  console.log("calling line status");
+  const stream = client.getStreamData({ name: "khurram" });
+  stream.on("data", (err, response) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(response);
+  });
+
+  stream.on("end", () => {
+    console.log("finisehd stream");
+  });
 }
 
 main();

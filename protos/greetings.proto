@@ -5,6 +5,9 @@ service Greeter {
 
   // Sends another greeting
   rpc SayHelloAgain(HelloRequest) returns (HelloReply) {}
+
+  // Stream example
+  rpc GetStreamData(HelloRequest) returns (stream StreamData) {}
 }
 
 // The request message containing the user's name.
@@ -16,4 +19,12 @@ message HelloRequest {
 // The response message containing the greetings
 message HelloReply {
   required string message = 1;
+}
+
+// Line status data object
+message StreamData {
+  required string index = 1;
+  required string guid = 2;
+  required string isActive = 3;
+  required string eyeColor = 4;
 }
