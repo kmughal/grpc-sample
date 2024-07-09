@@ -1,5 +1,5 @@
 const PROTO_PATH = __dirname + "/protos/greetings.proto";
-const grpc = require("grpc");
+const grpc = require("@grpc/grpc-js");
 const loader = require("@grpc/proto-loader");
 
 const packageDefinition = loader.loadSync(PROTO_PATH, {
